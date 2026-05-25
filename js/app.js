@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
         navMenu.classList.toggle("active");
     });
 
-    // Close menu when link is clicked
     document.querySelectorAll(".nav-menu a").forEach(link => {
         link.addEventListener("click", () => navMenu.classList.remove("active"));
     });
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const body = header.nextElementSibling;
             const isVisible = body.style.display === "block";
             
-            // Close all
             document.querySelectorAll(".accordion-body").forEach(b => b.style.display = "none");
             document.querySelectorAll(".accordion-header span").forEach(s => s.textContent = "+");
 
@@ -32,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 3. VIRTUAL ASSISTANT (CHATBOT)
+    // 3. SMART STUDIO ASSISTANT
     const botToggle = document.getElementById("botToggle");
     const botWindow = document.getElementById("botWindow");
     const closeBot = document.getElementById("closeBot");
@@ -45,30 +43,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeBot.addEventListener("click", () => botWindow.style.display = "none");
 
-    // Bot interactions logic
     botOptions.addEventListener("click", (e) => {
         if (!e.target.classList.contains("option-btn")) return;
 
         const userChoiceText = e.target.textContent;
         const nextStep = e.target.getAttribute("data-next");
 
-        // Add user response message
         appendMessage(userChoiceText, "user-msg");
         botOptions.style.display = "none";
 
-        // Bot thinking delay simulation
         setTimeout(() => {
-            if (nextStep === "famiglia") {
-                appendMessage("L'Avv. Mazzini si occupa attivamente di separazioni e tutela minori. Ti consiglio di prenotare una consulenza strategica iniziale tramite il nostro calendario qui sul sito.", "bot-msg");
-            } else if (nextStep === "immobili") {
-                appendMessage("Per questioni immobiliari, contratti o sfratti, analizziamo subito i documenti. Puoi riservare uno slot orario nel modulo prenotazioni.", "bot-msg");
+            if (nextStep === "civile") {
+                appendMessage("Lo Studio vanta una quindicennale esperienza in contrattualistica, risarcimento danni e diritto di famiglia. Può richiedere un incontro conoscitivo selezionando un orario nel modulo sottostante.", "bot-msg");
+            } else if (nextStep === "tributario") {
+                appendMessage("In materia fiscale e di contenziosi tributari, offriamo una consulenza altamente specializzata. Consigliamo di riservare tempestivamente un appuntamento per analizzare gli atti.", "bot-msg");
             } else {
-                appendMessage("Perfetto. Per qualsiasi causa civile, valutiamo insieme i dettagli. Clicca sul link sotto il calendario per scegliere l'orario.", "bot-msg");
+                appendMessage("Seguiamo le aziende nelle procedure fallimentari e di ristrutturazione debito. Può fissare direttamente una prima sessione di analisi strategica sul nostro calendario.", "bot-msg");
             }
             
-            // Final action link to calendar
             setTimeout(() => {
-                appendMessage("<a href='#prenota' style='color:#b45309; font-weight:bold;'>Clicca qui per aprire il Calendario</a>", "bot-msg");
+                appendMessage("<a href='#prenota' style='color:#b45309; font-weight:bold;'>Scegli data e ora nel Calendario ↓</a>", "bot-msg");
             }, 600);
         }, 800);
     });
@@ -81,16 +75,16 @@ document.addEventListener("DOMContentLoaded", () => {
         botMessages.scrollTop = botMessages.scrollHeight;
     }
 
-    // 4. GDPR COOKIE BANNER
+    // 4. COOKIE BANNER
     const cookieBanner = document.getElementById("cookieBanner");
     const acceptCookies = document.getElementById("acceptCookies");
 
-    if (localStorage.getItem("cookiesAccepted") === "true") {
+    if (localStorage.getItem("studioCookiesAccepted") === "true") {
         cookieBanner.style.display = "none";
     }
 
     acceptCookies.addEventListener("click", () => {
-        localStorage.setItem("cookiesAccepted", "true");
+        localStorage.setItem("studioCookiesAccepted", "true");
         cookieBanner.style.display = "none";
     });
 });
