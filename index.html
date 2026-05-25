@@ -26,12 +26,6 @@
         "@type": "GeoCoordinates",
         "latitude": "45.4447",
         "longitude": "8.6253"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
       }
     }
     </script>
@@ -41,123 +35,115 @@
     <header class="site-header">
         <div class="container header-flex">
             <a href="#" class="logo">Broggi & Mazzini <span>Studio Legale Associato</span></a>
+            <button class="burger" id="burgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
             <nav class="nav-menu" id="navMenu">
                 <a href="#studio">Lo Studio</a>
                 <a href="#aree">Aree di Attività</a>
                 <a href="#prenota">Appuntamento</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contatti">Contatti</a>
+                <a href="tel:+390321611619" class="btn btn-phone btn-mobile-nav">0321 611619</a>
             </nav>
-            <a href="tel:+390321611619" class="btn btn-phone">0321 611619</a>
-            <button class="burger" id="burgerBtn"><span></span><span></span><span></span></button>
         </div>
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero fade-in">
             <div class="container hero-grid">
                 <div class="hero-text">
                     <h1>Assistenza Legale Qualificata a Novara</h1>
-                    <p>Da oltre quindici anni lo Studio Legale Associato Broggi e Mazzini offre consulenza strategica a imprese e privati, guidando i clienti nella risoluzione di controversie civili, familiari e societarie con professionalità e solida tradizione forense.</p>
+                    <p>Da oltre quindici anni, lo Studio Legale Associato Broggi e Mazzini offre consulenza strategica a imprese e privati, guidando i clienti con professionalità e solida tradizione forense.</p>
                     <div class="hero-buttons">
-                        <a href="#prenota" class="btn btn-primary">Fissa un Appuntamento</a>
-                        <a href="tel:+390321611619" class="btn btn-secondary">Chiama in Studio</a>
+                        <a href="#prenota" class="btn btn-primary">Richiedi Consulenza</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="photo-placeholder">Avv. Antonio Broggi & Avv. Paolo Mazzini</div>
+                    <div class="photo-placeholder">Avv. A. Broggi & Avv. P. Mazzini</div>
                 </div>
             </div>
         </section>
 
-        <section id="studio" class="sections">
+        <section id="studio" class="sections bg-white scroll-anim">
             <div class="container max-w-md text-center">
                 <h2 class="section-title">Il Nostro Studio</h2>
                 <p>Nato a Novara da un felice sodalizio professionale tra gli Avvocati <strong>Antonio Broggi</strong> e <strong>Paolo Mazzini</strong>, lo Studio unisce competenze specialistiche maturate in anni di attività autonoma.</p>
-                <p style="margin-top: 15px;">Entrambi provenienti da famiglie di profonda tradizione forense, i titolari hanno scelto di concentrare lo Studio nelle materie del diritto civile, societario e tributario, offrendo anche servizi di domiciliazione legale per colleghi di altri Fori.</p>
+                <p style="margin-top: 15px;">Provenienti da famiglie di tradizione forense, i titolari si concentrano nelle materie del diritto civile, societario e tributario.</p>
             </div>
         </section>
 
-        <section id="aree" class="sections bg-light">
+        <section id="aree" class="sections bg-light scroll-anim">
             <div class="container">
                 <h2 class="section-title">Settori di Specializzazione</h2>
-                <div class="grid-cards">
-                    <div class="card">
+                <div class="grid-cards mobile-grid">
+                    <div class="card card-anim">
                         <h3>Diritto Civile</h3>
-                        <p>Consulenza e assistenza completa in materia contrattuale, obbligazioni, risarcimento danni e tutela dei diritti patrimoniali per privati e aziende.</p>
+                        <p>Assistenza completa in materia contrattuale, risarcimento danni e tutela patrimoniale.</p>
                     </div>
-                    <div class="card">
+                    <div class="card card-anim">
                         <h3>Diritto Familiare</h3>
-                        <p>Gestione delicata e riservata di procedure di separazione, divorzio, affidamento minori, tutele e questioni legate al diritto di famiglia e successorio.</p>
+                        <p>Gestione delicata di separazioni, divorzi, affidamento minori e questioni ereditarie.</p>
                     </div>
-                    <div class="card">
+                    <div class="card card-anim">
                         <h3>Diritto Tributario</h3>
-                        <p>Assistenza specialistica nel contenzioso con l'Amministrazione Finanziaria e consulenza mirata per la corretta gestione delle controversie fiscali.</p>
+                        <p>Contenzioso tributario e consulenza mirata per la gestione delle controversie fiscali.</p>
                     </div>
-                    <div class="card">
+                    <div class="card card-anim">
                         <h3>Diritto Fallimentare</h3>
-                        <p>Supporto qualificato nella gestione della crisi d'impresa, procedure concorsuali, ristrutturazione dei debiti e tutela dei creditori.</p>
+                        <p>Supporto alla crisi d'impresa, procedure concorsuali e ristrutturazione debito.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="prenota" class="sections">
+        <section id="prenota" class="sections bg-white scroll-anim">
             <div class="container">
-                <h2 class="section-title">Richiesta di Consulenza Online</h2>
-                <p class="section-subtitle">Riserva un incontro direttamente nel calendario dello Studio per una valutazione preliminare.</p>
-                <div class="calendar-wrapper">
-                    <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0X..." style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                <h2 class="section-title">Consulenza Online</h2>
+                <div class="calendar-wrapper mobile-calendar">
+                    <iframe src="https://calendar.google.com/calendar/appointments/schedules/..." style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
                 </div>
             </div>
         </section>
 
-        <section id="faq" class="sections bg-light">
+        <section id="faq" class="sections bg-light scroll-anim">
             <div class="container max-w-md">
                 <h2 class="section-title">Domande Frequenti</h2>
                 <div class="accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-header">Lo Studio offre domiciliazione legale? <span>+</span></button>
+                    <div class="accordion-item item-anim">
+                        <button class="accordion-header">Offrite domiciliazione legale? <span>+</span></button>
                         <div class="accordion-body">
-                            <p>Sì, in uno spirito di costante collaborazione tra colleghi, lo Studio offre servizi di domiciliazione legale e sostituzione in udienza presso il Foro di Novara per avvocati di altri Fori.</p>
+                            <p>Sì, offriamo servizi di domiciliazione e sostituzione udienze presso il Foro di Novara per colleghi di altri Fori.</p>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">Come richiedere un preventivo dettagliato? <span>+</span></button>
+                    <div class="accordion-item item-anim">
+                        <button class="accordion-header">Come richiedere un preventivo? <span>+</span></button>
                         <div class="accordion-body">
-                            <p>È possibile richiedere un preventivo personalizzato fissando un primo colloquio informativo in Studio o inviando una email con i dettagli della pratica alla nostra segreteria.</p>
+                            <p>Potete fissare un primo colloquio informativo o inviare una email con i dettagli alla segreteria.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contatti" class="sections">
-            <div class="container grid-contacts">
+        <section id="contatti" class="sections bg-white scroll-anim">
+            <div class="container grid-contacts mobile-grid">
                 <div class="contact-info">
                     <h2>Contatti Studio Legale</h2>
                     <address>
-                        <p><strong>Indirizzo:</strong> Corso Felice Cavallotti 22 - 28100 Novara (NO)</p>
+                        <p><strong>Sede:</strong> Corso Felice Cavallotti 22, Novara</p>
                         <p><strong>Telefono:</strong> +39 0321 611619</p>
-                        <p><strong>Fax:</strong> +39 0321 620629</p>
                         <p><strong>Email:</strong> segreteria@studiobroggimazzini.eu</p>
-                        <p><strong>Orari Segreteria:</strong> Lun - Ven: 09:00 - 18:00</p>
                     </address>
                 </div>
                 <div class="contact-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m18!1m2!1s0x47865942478f729b%3A0xc3f5b9d3566b6cba!2sCorso%20Felice%20Cavallotti%2C%2022%2C%2028100%20Novara%20NO!5e0!3m2!1sit!2sit!4v1716500000000!5m2!1sit!2sit" width="100%" height="350" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m18!1m2!1s0x47865942478f729b%3A0xc3f5b9d3566b6cba!2sCorso%20Felice%20Cavallotti%2C%2022%2C%2028100%20Novara%20NO!5e0!3m2!1sit!2sit!4v1716500000000!5m2!1sit!2sit" width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container footer-flex">
+    <footer class="site-footer bg-light">
+        <div class="container footer-flex text-center">
             <p>© 2026 Studio Legale Associato Avvocati Broggi e Mazzini. P.IVA 01981150038</p>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Cookie Policy</a>
-            </div>
         </div>
     </footer>
 
@@ -165,25 +151,20 @@
         <button class="bot-toggle" id="botToggle">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
         </button>
-        <div class="bot-window" id="botWindow">
+        <div class="bot-window mobile-bot" id="botWindow">
             <div class="bot-header">
-                <h4>Assistente di Studio</h4>
+                <h4>Assistente Studio</h4>
                 <button id="closeBot">×</button>
             </div>
             <div class="bot-messages" id="botMessages">
-                <div class="msg bot-msg">Buongiorno e benvenuto sul sito dello Studio Associato Broggi & Mazzini. Di quale tipo di assistenza legale o consulenza ha bisogno oggi?</div>
+                <div class="msg bot-msg">Buongiorno! Studio Associato Broggi & Mazzini. Come possiamo aiutarla oggi?</div>
             </div>
             <div class="bot-options" id="botOptions">
                 <button class="option-btn" data-next="civile">Diritto Civile / Famiglia</button>
-                <button class="option-btn" data-next="tributario">Diritto Tributario / Fiscale</button>
-                <button class="option-btn" data-next="fallimentare">Crisi d'Impresa / Fallimentare</button>
+                <button class="option-btn" data-next="tributario">Diritto Tributario</button>
+                <button class="option-btn" data-next="fallimentare">Crisi d'Impresa</button>
             </div>
         </div>
-    </div>
-
-    <div class="cookie-banner" id="cookieBanner">
-        <p>Questo sito utilizza cookie tecnici e analitici per ottimizzare l'esperienza utente. <a href="#">Informativa Privacy</a></p>
-        <button class="btn btn-primary btn-sm" id="acceptCookies">Accetta</button>
     </div>
 
     <script src="js/app.js"></script>
