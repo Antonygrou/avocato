@@ -74,7 +74,7 @@
         <section id="aree" class="sections bg-light scroll-anim">
             <div class="container">
                 <h2 class="section-title">Settori di Specializzazione</h2>
-                <div class="grid-cards">
+                <div class="grid-cards mobile-grid">
                     <div class="card card-anim">
                         <h3>Diritto Civile</h3>
                         <p>Assistenza completa in materia contrattuale, risarcimento danni e tutela patrimoniale.</p>
@@ -98,21 +98,21 @@
         <section id="prenota" class="sections bg-white scroll-anim">
             <div class="container max-w-md">
                 <h2 class="section-title">Richiedi un Appuntamento</h2>
-                <p class="form-subtitle text-center">Compila il modulo sottostante. La data richiesta è indicativa: la segreteria dello Studio vi ricontatterà entro poche ore per confermare l'orario esatto.</p>
+                <p class="form-subtitle text-center">Compila il modulo sottostante. La data richiesta è indicativa: lo Studio vi ricontatterà entro poche ore per confermare l'orario esatto.</p>
                 
                 <form action="https://formspree.io/f/xknqgjew" method="POST" class="appointment-form">
                     <div class="form-group">
                         <label for="name">Nome e Cognome *</label>
-                        <input type="text" id="name" name="name" required placeholder="Es. Mario Rossi">
+                        <input type="text" id="name" name="name" required placeholder="Mario Rossi">
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="phone">Telefono *</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="Es. +39 333 1234567">
+                            <input type="tel" id="phone" name="phone" required placeholder="+39 333 1234567">
                         </div>
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required placeholder="Es. mario.rossi@email.it">
+                            <input type="email" id="email" name="email" required placeholder="mario.rossi@email.it">
                         </div>
                     </div>
                     <div class="form-row">
@@ -125,14 +125,14 @@
                             <select id="area" name="area">
                                 <option value="civile">Diritto Civile / Familiare</option>
                                 <option value="tributario">Diritto Tributario</option>
-                                <option value="fallimentare">Diritto Fallimentare / Crisi d'Impresa</option>
+                                <option value="fallimentare">Diritto Fallimentare</option>
                                 <option value="altro">Altro motivo</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="message">Breve descrizione del caso (Facoltativo)</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Inserisci qui una breve nota..."></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Nota..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-full">Invia Richiesta Appuntamento</button>
                 </form>
@@ -160,7 +160,7 @@
         </section>
 
         <section id="contatti" class="sections bg-white scroll-anim">
-            <div class="container grid-contacts">
+            <div class="container grid-contacts mobile-grid">
                 <div class="contact-info">
                     <h2>Contatti Studio Legale</h2>
                     <address>
@@ -186,7 +186,7 @@
         <button class="bot-toggle" id="botToggle">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
         </button>
-        <div class="bot-window" id="botWindow">
+        <div class="bot-window mobile-bot" id="botWindow">
             <div class="bot-header">
                 <h4>Assistente Studio</h4>
                 <button id="closeBot">×</button>
