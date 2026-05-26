@@ -28,12 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 3. REVIEWS SLIDER (NEW LOGIC)
+    // 3. REVIEWS SLIDER
     const slides = document.querySelectorAll(".review-slide");
     const indicators = document.querySelectorAll(".indicator");
     let currentSlide = 0;
 
     function showSlide(index) {
+        if(slides.length === 0) return;
         slides.forEach(s => s.classList.remove("active"));
         indicators.forEach(i => i.classList.remove("active"));
         slides[index].classList.add("active");
@@ -48,12 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Auto rotate reviews every 6 seconds
-    setInterval(() => {
-        let next = currentSlide + 1;
-        if (next >= slides.length) next = 0;
-        showSlide(next);
-    }, 6000);
+    if(slides.length > 0) {
+        setInterval(() => {
+            let next = currentSlide + 1;
+            if (next >= slides.length) next = 0;
+            showSlide(next);
+        }, 6000);
+    }
 
     // 4. SMART ASSISTANT CHATBOT
     const botToggle = document.getElementById("botToggle");
@@ -92,16 +94,4 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 800);
         });
     }
-
-    // 5. SCROLL ANIMATIONS
-    const animatedElements = document.querySelectorAll('.scroll-anim, .card-anim, .item-anim');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    animatedElements.forEach((el) => observer.observe(el));
 });
