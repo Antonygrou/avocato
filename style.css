@@ -22,6 +22,7 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--whit
 h1, h2, h3, h4 { font-family: var(--font-serif); color: var(--primary); font-weight: 700; }
 .section-title { font-size: 2.5rem; margin-bottom: 15px; text-align: center; }
 .section-subtitle-text { font-size: 1.1rem; color: #64748b; margin-bottom: 40px; font-style: italic; }
+.form-subtitle { font-size: 0.95rem; color: #64748b; margin-bottom: 25px; line-height: 1.5; }
 
 /* Кнопки */
 .btn { display: inline-block; padding: 12px 26px; border-radius: 4px; text-decoration: none; font-weight: 600; cursor: pointer; transition: all 0.2s ease; font-size: 0.9rem; border: none; }
@@ -29,22 +30,24 @@ h1, h2, h3, h4 { font-family: var(--font-serif); color: var(--primary); font-wei
 .btn-primary:hover { background-color: #8c6639; }
 .btn-secondary { background-color: transparent; border: 1px solid var(--primary); color: var(--primary); }
 .btn-secondary:hover { background-color: var(--primary); color: var(--white); }
-.btn-phone { background-color: var(--primary); color: var(--white); font-size: 0.85rem; padding: 10px 18px; }
-.btn-phone:hover { background-color: var(--accent); }
+
+/* Фікс кнопки телефону (бронзова) */
+.btn-phone { background-color: var(--accent) !important; color: var(--white) !important; font-size: 0.85rem; padding: 10px 18px; }
+.btn-phone:hover { background-color: #8c6639 !important; }
 .btn-full { width: 100%; display: block; font-size: 1rem; padding: 14px; margin-top: 15px; }
 
-/* ШАПКА З ГРАФІЧНИМ ЛОГОТИПОМ-ВИВІСКОЮ */
+/* ЧИСТА БІЛА ШАПКА З ОРИГІНАЛЬНИМ ГРАФІЧНИМ ЛОГОТИПОМ */
 .site-header { background: #ffffff; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 1000; height: 90px; display: flex; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
 .header-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 
 .logo-img-link { display: flex; align-items: center; text-decoration: none; }
-.site-logo-img { height: 60px; width: auto; max-width: 100%; object-fit: contain; display: block; }
+.site-logo-img { height: 65px; width: auto; max-width: 100%; object-fit: contain; display: block; }
 
 .nav-menu { display: flex; align-items: center; gap: 18px; }
 .nav-menu a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.85rem; transition: color 0.2s; }
 .nav-menu a:hover:not(.btn) { color: var(--accent); }
 
-/* Мобільні елементи керування */
+/* Елементи керування для мобільних */
 .header-actions { display: none; align-items: center; gap: 12px; }
 .btn-phone-icon { width: 40px; height: 40px; background: var(--bg-light); border: 1px solid #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); text-decoration: none; }
 .burger { background: none; border: none; cursor: pointer; display: flex; flex-direction: column; gap: 5px; padding: 5px; }
@@ -66,9 +69,9 @@ h1, h2, h3, h4 { font-family: var(--font-serif); color: var(--primary); font-wei
 .hero-image { width: 100%; max-width: 480px; height: 360px; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
 .hero-image img { width: 100%; height: 100%; object-fit: cover; }
 
-/* СТИЛІЗАЦІЯ КНОПКИ FAQ (ВИПРАВЛЕНО ТА ВІДНОВЛЕНО) */
+/* FAQ (ВІДНОВЛЕНО) */
 .accordion-item { background: var(--white); margin-bottom: 15px; border-radius: 4px; border: 1px solid #e2e8f0; overflow: hidden; }
-.accordion-header { width: 100%; padding: 18px 20px; text-align: left; background: none; border: none; font-size: 1.1rem; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; cursor: pointer; align-items: center; font-family: var(--font-serif); outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+.accordion-header { width: 100%; padding: 18px 20px; text-align: left; background: none; border: none; font-size: 1.1rem; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; cursor: pointer; align-items: center; font-family: var(--font-serif); outline: none; appearance: none; }
 .accordion-header:focus { background-color: var(--bg-light); }
 .accordion-toggle-icon { font-size: 1.2rem; color: var(--accent); font-weight: bold; }
 .accordion-body { padding: 0 20px 20px 20px; display: none; color: var(--text); font-size: 0.95rem; line-height: 1.5; }
@@ -108,11 +111,11 @@ h1, h2, h3, h4 { font-family: var(--font-serif); color: var(--primary); font-wei
 .grid-contacts { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 30px; }
 .site-footer { padding: 25px 0; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; }
 
-/* АДАПТИВНІ ПРАВИЛА ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ (90% КЛІЄНТІВ) */
+/* RESPONSIVE */
 @media (max-width: 992px) {
     .header-actions { display: flex; }
     .site-header { height: 80px; }
-    .site-logo-img { height: 45px; } /* Вивіска акуратно зменшується на мобільних екранах */
+    .site-logo-img { height: 50px; } 
     
     .nav-menu { display: none; position: absolute; top: 80px; left: 0; width: 100%; background: #fff; flex-direction: column; padding: 20px; gap: 0; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-bottom: 1px solid #e2e8f0; }
     .nav-menu.active { display: flex; }
